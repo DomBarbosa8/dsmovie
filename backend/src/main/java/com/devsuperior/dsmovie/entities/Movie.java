@@ -10,9 +10,9 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import lombok.NoArgsConstructor;
 
-@NoArgsConstructor
+
+
 @Entity
 @Table(name="tb_movie")
 public class Movie {
@@ -27,6 +27,10 @@ public class Movie {
 	
 	@OneToMany(mappedBy="id.movie")
 	private Set<Score> scores = new HashSet<>();
+	
+	public Movie() {
+		
+	}
 	
 	public Movie(Long id, String title, Double score, Integer count, String image) {
 		this.id = id;
