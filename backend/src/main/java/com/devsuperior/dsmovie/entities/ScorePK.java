@@ -6,6 +6,9 @@ import javax.persistence.Embeddable;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
 @Embeddable
 public class ScorePK implements Serializable{
 	
@@ -22,9 +25,6 @@ public class ScorePK implements Serializable{
 	@JoinColumn(name="user_id")
 	private User user;
 	
-	public ScorePK() {
-		
-	}
 	public Movie getMovie() {
 		return movie;
 	}

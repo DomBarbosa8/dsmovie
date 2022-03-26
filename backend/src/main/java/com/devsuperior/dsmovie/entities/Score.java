@@ -2,6 +2,9 @@ package com.devsuperior.dsmovie.entities;
 
 import javax.persistence.*;
 
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
 @Entity
 @Table(name="tb_score")
 public class Score {
@@ -9,9 +12,7 @@ public class Score {
 	@EmbeddedId
 	private ScorePK id = new ScorePK();
 	private Double value;
-	public Score() {
-		
-	}
+
 	public void setMovie(Movie movie) {
 		id.setMovie(movie);
 	}
